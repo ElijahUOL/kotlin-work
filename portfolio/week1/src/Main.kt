@@ -15,7 +15,7 @@ fun main (args: Array<String>)
         exitProcess(1)
     }
 
-    //Assigns arguments to variables and calulcates s to be ued in formula from Wikipedia link provided
+    //Assigns arguments to variables and calulcates s to be used in formula from Wikipedia link provided
     val a = args[0].toFloat()
     val b = args[1].toFloat()
     val c = args[2].toFloat()
