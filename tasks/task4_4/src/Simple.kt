@@ -14,21 +14,10 @@ fun main(args: Array<String>) {
     val finalTemp = args[1].toDouble()
     val incriment = args[2].toDouble()
     var workingTemp = initialTemp
-    val t = Terminal()
-
-    t.println(table {
-        header
-        {
-            row("Celsius", "Fahrenheit")
-        }
-        body
-        {
-            while (workingTemp <= finalTemp)
-            {
-                val tempInFahrenheit  = workingTemp * 1.8 + 32
-                row(workingTemp, tempInFahrenheit)
-                workingTemp += incriment
-            }
-        }
-    })
+    System.out.printf("%7s %12s%n", "Celsius", "Fahrenheit")
+    while (workingTemp <= finalTemp) {
+        val tempInFahrenheit = workingTemp * 1.8 + 32
+        System.out.printf("%7.1f %12.1f%n", workingTemp, tempInFahrenheit)
+        workingTemp += incriment
+    }
 }
