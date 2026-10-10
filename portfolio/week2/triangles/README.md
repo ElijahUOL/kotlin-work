@@ -1,4 +1,4 @@
-# Triangles
+./# Triangles
 
 Edit `triangles/src/Triangles.kt`. Notice how it defines a data structure
 named `Triangle`, which is simply an alias for `Triple<Double,Double,Double>`.
