@@ -2,7 +2,7 @@
 fun median (numbers: List<Float>): Float {
     require(numbers.isNotEmpty())
     if (numbers.size % 2 == 0 ) {
-        val median: Float = numbers[numbers.size / 2]
+        val median: Float = (numbers[numbers.size / 2] + numbers[numbers.size / 2 - 1]) / 2.0f
         return median
     }
     else {

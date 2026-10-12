@@ -21,13 +21,13 @@ class MedianTest : FreeSpec({
     "Returns an equal value when size = 1" {
         median(listOf(1.0f)) shouldBe (1.0f plusOrMinus tolerance)
     }
-    "Returns the second value when size = 2" {
-        median(listOf(1.0f, 2.0f)) shouldBe (2.0f plusOrMinus tolerance)
+    "Returns the average of the first and second value when size = 2" {
+        median(listOf(1.0f, 2.0f)) shouldBe (1.5f plusOrMinus tolerance)
     }
     "Returns the second value when size = 3" {
         median(listOf(1.0f, 2.0f, 3.0f)) shouldBe (2.0f plusOrMinus tolerance)
     }
-    "Returns the third value when size = 4" {
-        median(listOf(1.0f, 2.0f, 3.0f, 4.0f)) shouldBe (3.0f plusOrMinus tolerance)
+    "Returns the average of the second and third value when size = 4" {
+        median(listOf(1.0f, 2.0f, 3.0f, 4.0f)) shouldBe (2.5f plusOrMinus tolerance)
     }
 })
