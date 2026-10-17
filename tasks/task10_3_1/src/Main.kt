@@ -1,4 +1,4 @@
-// Task 10.3.1
+/// Task 10.3.1
 
 import kotlin.system.exitProcess
 
@@ -18,5 +18,8 @@ fun main(args: Array<String>) {
     val result = translate[word]
 
     //println(result)
-    display(result)
+    when (result) {
+        null -> println("?")
+        else -> display(result)
+    }
 }
