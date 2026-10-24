@@ -21,4 +21,5 @@ fun main(args: Array<String>) {
 
     println("\nItems due on $date:")
     toDo.getItemsDueOn(date).forEach(::println)
+
 }
