@@ -67,27 +67,12 @@ class ToDoList() {
     fun getItems(status: ItemStatus? = null): List<ToDoItem> {
         // Write code here to return a list of items with the matching
         // status, or a list of all items if status argument is null
-        val gotItems = mutableListOf<ToDoItem>()
-        if (status == null){
+        if (status == null) {
             return items
         }
-        for (item in items) {
-            if (item.status == status){
-                gotItems.add(item)
-            }
-        }
+        val gotItems = items.filter { it.status == status }
         return gotItems
     }
 
-    fun getItemsDueOn(date: LocalDate): List<ToDoItem> {
-        // Write code here to return a list of items
-        // that are due on the specified date
-        val gotItems = mutableListOf<ToDoItem>()
-        for (item in items) {
-            if (item.dueDate == date) {
-                gotItems.add(item)
-            }
-        }
-        return gotItems
-    }
+    fun getItemsDueOn(date: LocalDate) = items.filter {it.dueDate == date}
 }
