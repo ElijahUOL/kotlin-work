@@ -20,3 +20,4 @@ abstract class BankAccount(val holder: String) {
 
     abstract fun withdraw(amount: Int)
 }
+
